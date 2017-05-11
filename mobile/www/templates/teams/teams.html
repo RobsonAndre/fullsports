@@ -1,0 +1,8 @@
+<ion-view view-title="Teams" align-title="center">
+    <ion-content ng-class="{expanded:$scope.isExpanded}">
+        <h1>{{view}}</h1>
+        {{user}}
+        <p><a ui-sref="app.createTeam({'user' : 2323})">Create</a></p>
+        <p><a ui-sref="app.viewTeam({'user' : 2323, 'team' : 2323})">View Team</a></p>
+    </ion-content>
+</ion-view>

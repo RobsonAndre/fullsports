@@ -1,0 +1,22 @@
+{
+  "name": "teamfour",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "usuarioJapa <willian.hsimabukuro@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-router": "^1.0.1",
+    "angular": "angularjs#^1.6.4"
+  }
+}
