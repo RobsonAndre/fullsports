@@ -186,7 +186,15 @@ angular.module('controllers', [])
 
 .controller('RoomCtrl', function($scope, $stateParams, RoomService) {
     $scope.view = 'ROOM';
+    $scope.sports = RoomService.sports;
+    $scope.rooms = RoomService.rooms;
     $scope.user = $stateParams.user;
-    $scope.room = $stateParams.room;
+    $scope.roomid = $stateParams.room;
+    $scope.room = {status : 'Open'};
+
+    $scope.create = function() {
+        RoomService.rooms.push($scope.room);
+        $scope.room = {status : 'Open'};
+    }
 })
 ;

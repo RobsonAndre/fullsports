@@ -1,5 +1,18 @@
 <ion-view view-title="Rooms" align-title="center">
     <ion-content ng-class="{expanded:$scope.isExpanded}">
         <h1>Create {{view}}</h1>
+        <form name="roomForm" ng-submit="create()">
+            <label>ID</label>
+            <input ng-model="room.id" type="number"><br>
+            <label>Sport</label>
+            <select ng-model="room.sport" required>
+                <option ng-repeat="x in sports" value="{{x}}">{{x}}</option>
+            </select><br>
+            <label>Players</label>
+            <input ng-model="room.players" type="number" required><br>
+            <label>Private</label>
+            <input ng-model="room.private" type="checkbox"><br>
+            <button ng-disabled="roomForm.$invalid" type="submit">Create</button>
+        </form>
     </ion-content>
 </ion-view>

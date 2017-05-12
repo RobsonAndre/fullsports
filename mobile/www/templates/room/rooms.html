@@ -1,9 +1,14 @@
 <ion-view view-title="Rooms" align-title="center">
     <ion-content ng-class="{expanded:$scope.isExpanded}">
         <h1>{{view}}</h1>
-        {{user}}
-
-        <p><a ui-sref="app.joinRoom({'user' : 2323, 'room' : 22})">Join Room</a></p>
+        User: {{user}}
         <p><a ui-sref="app.createRoom({'user' : 2323})">Create Room</a></p>
+        <div ng-repeat="x in rooms" style="border-bottom: 1px solid black;">
+            {{x.id}}<p/>
+            {{x.sport}}<p/>
+            {{x.players}}<p/>
+            {{x.status}}<p/>
+            <button ng-disabled="x.private" ui-sref="app.joinRoom({'user' : 2323, 'room' : {{x.id}}})">Join</button>
+        </div>
     </ion-content>
 </ion-view>

@@ -1,4 +1,4 @@
-angular.module('starter', ['ionic','services','controllers','ionic-material'])
+angular.module('starter', ['ionic','services','controllers','ionic-material','ionMdInput'])
 
 .config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
 
